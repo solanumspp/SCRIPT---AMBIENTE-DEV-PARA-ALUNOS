@@ -25,16 +25,16 @@ PASSO 4. Reinicie o sistema.
 PASSO 5. Cheque o que foi instalado da seguinte forma:
 1º reinicie o powershell ou execute:  refreshenv (em modo adm)
 2º verifique as instalações:
-# Docker 
+Docker 
 docker --version 
-# Node.js 
+Node.js 
 node --version 
 npm --version 
-# Python 
+Python 
 python --version 
-# Git 
+Git 
 git --version 
-# VirtualBox 
+VirtualBox 
 VBoxManage --version
 
 OBS. SE QUISER O KAFKA DE QUALQUER FORMA
@@ -55,7 +55,7 @@ Teste cada ferramenta:
 
 No powershell
 
-# Teste básico
+Teste básico
 docker 
 run hello-world 
 node -e "console.log('Node.js funcionando!')" 
@@ -68,11 +68,11 @@ EXECUTE:
 Write-Host "=== VERIFICAÇÃO RÁPIDA ===" -ForegroundColor Cyan
 Write-Host ""
 
-# Atualizar PATH
+Atualizar PATH
 Write-Host "Atualizando variáveis de ambiente..." -ForegroundColor Yellow
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
-# Testes
+Testes
 Write-Host "1. Docker: " -ForegroundColor Yellow -NoNewline
 docker --version 2>&1 | Out-Null
 if ($LASTEXITCODE -eq 0) { Write-Host "✅ OK" -ForegroundColor Green } else { Write-Host "❌ FALHOU" -ForegroundColor Red }
@@ -96,7 +96,7 @@ if ($LASTEXITCODE -eq 0) { Write-Host "✅ OK" -ForegroundColor Green } else { W
 Write-Host ""
 Write-Host "=== TESTES ADICIONAIS ===" -ForegroundColor Cyan
 
-# Verificar se aplicativos existem
+Verificar se aplicativos existem
 Write-Host "Postman instalado? " -ForegroundColor Yellow -NoNewline
 if (Test-Path "C:\Users\*\AppData\Local\Postman\Postman.exe") { Write-Host "✅ SIM" -ForegroundColor Green } else { Write-Host "❌ NÃO" -ForegroundColor Red }
 
